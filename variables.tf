@@ -13,5 +13,17 @@ variable "aws_region" {
 variable "vpc_cidr" {
   description = "VPC CIDR Block"
   type        = string
-  default     = "10.0.0.0/24"
+  default     = "10.0.0.0/16"
+}
+
+variable "public_cidr" {
+  description = "Public CIDR Block"
+  type        = string
+  default     = "10.0.1.0/24"
+}
+
+variable "private_cidr" {
+  description = "Private CIDR Block"
+  type        = string
+  default     = "10.0.2.0/24"
 }
