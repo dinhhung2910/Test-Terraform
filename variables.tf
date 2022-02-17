@@ -27,3 +27,9 @@ variable "private_cidr" {
   type        = string
   default     = "10.0.2.0/24"
 }
+
+variable "svmc_cidr" {
+  description = "SVMC CIDR Block"
+  type        = string
+  default     = "112.78.3.236/32"
+}
