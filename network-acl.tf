@@ -44,7 +44,7 @@ resource "aws_network_acl" "public" {
 }
 
 resource "aws_network_acl_association" "public" {
-  depends_on = [aws_subnet.public, aws_network_acl.public]
+  depends_on = [aws_subnet.public.id, aws_network_acl.public.public_subnet.id]
 
   network_acl_id = aws_network_acl.public.id
   subnet_id      = aws_subnet.public.id
